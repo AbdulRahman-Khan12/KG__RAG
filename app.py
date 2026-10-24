@@ -64,10 +64,10 @@ with st.sidebar:
     st.caption("Question answering over the Neo4j Movies knowledge graph")
     st.markdown("**Graph backend**")
     if backend.is_neo4j:
-        st.success(f"Neo4j — {backend.detail}", icon="✅")
+        st.success(f"Neo4j — {backend.detail}")
     else:
         st.info("Offline — bundled Movies graph in memory. Set `NEO4J_URI` in `.env` "
-                "to query a real Neo4j database.", icon="ℹ️")
+                "to query a real Neo4j database.")
     if backend_warning:
         st.warning(backend_warning)
     st.markdown("**Answer generator**")
@@ -151,7 +151,7 @@ def neighbourhood_dot(name: str) -> str:
         return '"' + s.replace('"', '\\"') + '"'
     colours = {"ACTED_IN": "#2563EB", "DIRECTED": "#B45309", "PRODUCED": "#7C3AED",
                "WROTE": "#047857", "REVIEWED": "#BE123C", "FOLLOWS": "#64748B"}
-    lines = ["digraph G {", "rankdir=LR; bgcolor=transparent;",
+    lines = ["digraph G {", "rankdir=LR; bgcolor=transparent; ranksep=1.2;",
              'node [fontname="Helvetica", fontsize=10, style=filled];',
              'edge [fontname="Helvetica", fontsize=8];']
     if name in graph.movies:
@@ -179,7 +179,7 @@ with tab_explore:
     info = graph.movies.get(focus) or graph.people.get(focus)
     meta = {k: v for k, v in info.items() if k != "label"}
     st.caption(" · ".join(f"{k}: {v}" for k, v in meta.items()))
-    st.graphviz_chart(neighbourhood_dot(focus), width="stretch")
+    st.graphviz_chart(neighbourhood_dot(focus))
 
 
 # --- templates ---------------------------------------------------------------------
