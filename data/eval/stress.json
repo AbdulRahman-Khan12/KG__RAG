@@ -1,0 +1,20 @@
+{
+  "description": "Paraphrase stress set. Written AFTER the router was finished and never used to tune it, so it measures how the keyword router generalises to unseen phrasing. template null = no template can answer this (it needs LLM text-to-Cypher).",
+  "questions": [
+    {"q": "Who was the director of Unforgiven?", "template": "director_of_movie", "params": {"movie": "Unforgiven"}, "expect": ["Clint Eastwood"]},
+    {"q": "Name the cast of Twister", "template": "cast_of_movie", "params": {"movie": "Twister"}, "expect": ["Helen Hunt", "Bill Paxton"]},
+    {"q": "Which pictures feature Hugo Weaving?", "template": "movies_of_actor", "params": {"person": "Hugo Weaving"}, "expect": ["V for Vendetta"]},
+    {"q": "Has Tom Hanks ever worked with Kevin Bacon?", "template": "worked_together", "params": {"a": "Tom Hanks", "b": "Kevin Bacon"}, "expect": ["Apollo 13"]},
+    {"q": "What year was The Green Mile released?", "template": "movie_details", "params": {"movie": "The Green Mile"}, "expect": ["1999"]},
+    {"q": "Who helmed V for Vendetta?", "template": "director_of_movie", "params": {"movie": "V for Vendetta"}, "expect": ["James Marshall"]},
+    {"q": "Give me films from the early 2000s", "template": "movies_in_years", "params": {"start": 2000, "end": 2004}, "expect": ["Cast Away"]},
+    {"q": "Who reviewed Unforgiven?", "template": "reviews_of_movie", "params": {"movie": "Unforgiven"}, "expect": ["Jessica Thompson"]},
+    {"q": "Who are Keanu Reeves's frequent collaborators?", "template": "co_actors", "params": {"person": "Keanu Reeves"}, "expect": ["Carrie-Anne Moss"]},
+    {"q": "What character did Jack Nicholson portray in A Few Good Men?", "template": "role_in_movie", "params": {"person": "Jack Nicholson", "movie": "A Few Good Men"}, "expect": ["Col. Nathan R. Jessup"]},
+    {"q": "Who is the oldest actor in The Matrix?", "template": null, "params": {}, "expect": []},
+    {"q": "How many movies did Tom Hanks act in?", "template": "movies_of_actor", "params": {"person": "Tom Hanks"}, "expect": ["12"]},
+    {"q": "Which Wachowski movies are there?", "template": "movies_by_director", "params": {"person": "Lana Wachowski"}, "expect": ["Speed Racer"]},
+    {"q": "I loved Sleepless in Seattle, what else should I see?", "template": "recommend_similar", "params": {"movie": "Sleepless in Seattle"}, "expect": []},
+    {"q": "Who wrote the screenplay for Top Gun?", "template": "crew_of_movie", "params": {"movie": "Top Gun"}, "expect": ["Jim Cash"]}
+  ]
+}

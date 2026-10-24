@@ -1,0 +1,11 @@
+# KG__RAG - dependencies
+#
+# Kept minimal: the app runs on the bundled graph with only these installed.
+# Neo4j and the LLM are reached over the network, so neither adds a heavy
+# package - the LLM client is plain urllib (kg_rag/llm.py).
+
+pandas>=2.0
+streamlit>=1.49
+
+# Official Neo4j Python driver - used only when NEO4J_URI is set.
+neo4j>=5.14

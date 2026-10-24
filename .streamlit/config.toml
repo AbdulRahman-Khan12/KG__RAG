@@ -1,0 +1,11 @@
+[theme]
+# Indigo for the one thing to act on; everything else stays neutral so the
+# Cypher and the evidence tables carry the visual weight.
+primaryColor = "#4338CA"
+backgroundColor = "#F8F8FB"
+secondaryBackgroundColor = "#ECEDF3"
+textColor = "#1B1F2E"
+font = "sans serif"
+
+[browser]
+gatherUsageStats = false

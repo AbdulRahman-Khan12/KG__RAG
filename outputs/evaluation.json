@@ -1,0 +1,23 @@
+{
+  "gold": {
+    "questions": 32,
+    "generator": "template",
+    "routing_accuracy": 1.0,
+    "slot_accuracy": 1.0,
+    "retrieval_recall": 1.0,
+    "answer_recall": 1.0,
+    "grounded_rate": 1.0,
+    "end_to_end": 1.0
+  },
+  "stress": {
+    "questions": 15,
+    "generator": "template",
+    "routing_accuracy": 0.6,
+    "slot_accuracy": 0.6,
+    "retrieval_recall": 0.733,
+    "answer_recall": 0.733,
+    "grounded_rate": 1.0,
+    "end_to_end": 0.6
+  },
+  "backend": "offline"
+}
